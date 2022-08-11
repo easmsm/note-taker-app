@@ -1,8 +1,10 @@
-const $noteTitle = document.getElementById('note-title');
-const $noteText = document.querySelector('.note-textarea');
+//this const change was an attempt to get the index.js to connect to the index.html
 
-// let noteTitle = document.getElementById('note-title');
-// let noteText = document.getElementById('note-textarea');
+// const $noteTitle = document.getElementById('note-title');
+// const $noteText = document.querySelector('.note-textarea');
+
+let noteTitle = document.getElementById('note-title');
+let noteText = document.getElementById('note-textarea');
 let saveNoteBtn = document.querySelectorAll('save-note')
 let newNoteBtn = document.querySelectorAll('new-note');
 let noteList = document.querySelectorAll('.list-container .list-group');
