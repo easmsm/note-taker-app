@@ -1,8 +1,11 @@
-let noteTitle;
-let noteText;
-let saveNoteBtn;
-let newNoteBtn;
-let noteList;
+const $noteTitle = document.getElementById('note-title');
+const $noteText = document.querySelector('.note-textarea');
+
+// let noteTitle = document.getElementById('note-title');
+// let noteText = document.getElementById('note-textarea');
+let saveNoteBtn = document.querySelectorAll('save-note')
+let newNoteBtn = document.querySelectorAll('new-note');
+let noteList = document.querySelectorAll('.list-container .list-group');
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -26,7 +29,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('./notes.js', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
